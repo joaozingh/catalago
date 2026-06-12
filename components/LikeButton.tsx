@@ -23,7 +23,10 @@ export default function LikeButton({ productId }: { productId: number }) {
   };
 
   return (
-    <button className={styles.button} onClick={toggleLike}>
+    <button
+      className={`${styles.button} ${liked ? styles.liked : ''}`}
+      onClick={toggleLike}
+    >
       {liked ? '❤️ Favoritado' : '🤍 Favoritar'}
     </button>
   );
